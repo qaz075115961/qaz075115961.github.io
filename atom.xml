@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hexo</title>
   
-  
+  <subtitle>123</subtitle>
   <link href="https://qaz075115961.github.io/atom.xml" rel="self"/>
   
   <link href="https://qaz075115961.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://qaz075115961.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>CoolP</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>123</title>
-    <link href="https://qaz075115961.github.io/2023/11/09/test/"/>
-    <id>https://qaz075115961.github.io/2023/11/09/test/</id>
+    <link href="https://qaz075115961.github.io/2023/11/09/01-53-55/"/>
+    <id>https://qaz075115961.github.io/2023/11/09/01-53-55/</id>
     <published>2023-11-08T17:53:55.927Z</published>
     <updated>2023-11-08T18:01:36.168Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://qaz075115961.github.io/2023/11/08/hello-world/"/>
-    <id>https://qaz075115961.github.io/2023/11/08/hello-world/</id>
+    <link href="https://qaz075115961.github.io/2023/11/08/14-08-52/"/>
+    <id>https://qaz075115961.github.io/2023/11/08/14-08-52/</id>
     <published>2023-11-08T06:08:52.955Z</published>
     <updated>2023-11-08T18:01:23.538Z</updated>
     
