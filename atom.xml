@@ -6,7 +6,7 @@
   <link href="https://qaz075115961.github.io/atom.xml" rel="self"/>
   
   <link href="https://qaz075115961.github.io/"/>
-  <updated>2023-11-08T18:01:36.168Z</updated>
+  <updated>2023-11-10T04:44:30.214Z</updated>
   <id>https://qaz075115961.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://qaz075115961.github.io/2023/11/09/01-53-55/"/>
     <id>https://qaz075115961.github.io/2023/11/09/01-53-55/</id>
     <published>2023-11-08T17:53:55.927Z</published>
-    <updated>2023-11-08T18:01:36.168Z</updated>
+    <updated>2023-11-10T04:44:30.214Z</updated>
     
-    <content type="html"><![CDATA[<p>test</p>]]></content>
+    <content type="html"><![CDATA[<p>test</p><p><img src="https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/test/ab4f835edadacf7f4caf5afbddac5fe37965bda4.jpg" alt="123"></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;test&lt;/p&gt;
-</summary>
+&lt;p&gt;&lt;img src=&quot;https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/test/ab4f835edadacf7f4caf5afbddac5fe37965bda4.jpg&quot; alt=&quot;123&quot;&gt;</summary>
       
     
     
