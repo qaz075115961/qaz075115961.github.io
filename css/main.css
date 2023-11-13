@@ -1,23 +1,23 @@
 :root {
-  --body-bg-color: #eee;
-  --content-bg-color: #fff;
+  --body-bg-color: #363636;
+  --content-bg-color: #4f4f4f;
   --card-bg-color: #f5f5f5;
-  --text-color: #555;
+  --text-color: #dbdbdb;
   --blockquote-color: #666;
-  --link-color: #555;
-  --link-hover-color: #222;
+  --link-color: #dbdbdb;
+  --link-hover-color: #00f7ff;
   --brand-color: #fff;
   --brand-hover-color: #fff;
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
-  --menu-item-bg-color: #f5f5f5;
+  --menu-item-bg-color: #595959;
   --theme-color: #222;
-  --btn-default-bg: #fff;
-  --btn-default-color: #555;
-  --btn-default-border-color: #555;
-  --btn-default-hover-bg: #222;
-  --btn-default-hover-color: #fff;
-  --btn-default-hover-border-color: #222;
+  --btn-default-bg: #595959;
+  --btn-default-color: #dbdbdb;
+  --btn-default-border-color: #595959;
+  --btn-default-hover-bg: #666;
+  --btn-default-hover-color: #00f7ff;
+  --btn-default-hover-border-color: #666;
   --highlight-background: #f3f3f3;
   --highlight-foreground: #444;
   --highlight-gutter-background: #e1e1e1;
@@ -210,8 +210,8 @@ template {
   display: none;
 }
 ::selection {
-  background: #262a30;
-  color: #eee;
+  background: rgba(255,255,255,0.467);
+  color: rgba(0,0,0,0.62);
 }
 html,
 body {
@@ -261,7 +261,7 @@ p {
   margin: 0 0 20px;
 }
 a {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #c9c9c9;
   color: var(--link-color);
   cursor: pointer;
   outline: 0;
@@ -340,7 +340,7 @@ td {
 .btn {
   background: var(--btn-default-bg);
   border: 2px solid var(--btn-default-border-color);
-  border-radius: 2px;
+  border-radius: 16px;
   color: var(--btn-default-color);
   display: inline-block;
   font-size: 0.875em;
@@ -647,7 +647,7 @@ pre {
 }
 figure.highlight,
 pre {
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0 auto 20px;
 }
 figure.highlight figcaption,
@@ -799,7 +799,7 @@ pre code {
   width: 100%;
 }
 .post-body .label {
-  color: #555;
+  color: #dbdbdb;
   padding: 0 2px;
 }
 .post-body .label.default {
@@ -1204,7 +1204,7 @@ pre code {
 }
 .headband {
   background: var(--theme-color);
-  height: 3px;
+  height: 6px;
 }
 @media (max-width: 991px) {
   .headband {
@@ -1248,15 +1248,15 @@ pre code {
 }
 .site-title {
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1.375em;
+  font-size: 1.5em;
   font-weight: normal;
   line-height: 1.5;
   margin: 0;
 }
 .site-subtitle {
   color: #ddd;
-  font-size: 0.8125em;
-  margin: 10px 10px 0;
+  font-size: 0.8em;
+  margin: 2px 0;
 }
 .use-motion .site-title,
 .use-motion .site-subtitle,
@@ -1537,7 +1537,7 @@ pre code {
   width: 16px;
   background: #222;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.4;
   position: fixed;
   z-index: 30;
   right: 30px;
@@ -1673,7 +1673,7 @@ pre code {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: 800px;
 }
 @media (max-width: 767px) {
   .footer-inner {
@@ -1682,12 +1682,12 @@ pre code {
 }
 @media (min-width: 1200px) {
   .footer-inner {
-    width: 1160px;
+    width: 1000px;
   }
 }
 @media (min-width: 1600px) {
   .footer-inner {
-    width: 73%;
+    width: 1200px;
   }
 }
 .use-motion .footer {
@@ -1791,19 +1791,10 @@ pre code {
   }
 }
 .back-to-top {
-  font-size: 12px;
-  align-items: center;
-  bottom: -100px;
-  color: #fff;
-  display: flex;
-  height: 26px;
-  transition: bottom 0.2s ease-in-out;
-  background: #222;
-  cursor: pointer;
-  opacity: 0.6;
-  position: fixed;
-  z-index: 30;
-  right: 30px;
+  font-size: 20px;
+  margin: 8px -10px -20px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 .back-to-top span {
   margin-right: 8px;
@@ -1812,24 +1803,12 @@ pre code {
   text-align: center;
   width: 26px;
 }
-@media (max-width: 991px) {
-  .back-to-top {
-    right: 20px;
-  }
-}
-.back-to-top:hover {
-  opacity: 0.8;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    opacity: 0.8;
-  }
-}
-.back-to-top:hover {
-  color: #fc6423;
-}
 .back-to-top.back-to-top-on {
-  bottom: 30px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.back-to-top.back-to-top-on:hover {
+  opacity: 0.8;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2169,7 +2148,7 @@ pre code {
 }
 :not(.post-meta-break) + .post-meta-item::before {
   content: '|';
-  margin: 0 0.5em;
+  margin: 0 1em;
 }
 .post-meta-item-icon {
   margin-right: 3px;
@@ -2223,7 +2202,7 @@ pre code {
 .post-eof {
   background: #ccc;
   height: 1px;
-  margin: 80px auto 60px;
+  margin: 80px auto 10px;
   width: 8%;
 }
 .post-block:last-of-type .post-eof {
@@ -2539,8 +2518,8 @@ ul.breadcrumb li:last-child {
 }
 header.header {
   background: var(--content-bg-color);
-  border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 16px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.376);
 }
 @media (max-width: 991px) {
   header.header {
@@ -2552,7 +2531,7 @@ header.header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: 800px;
 }
 @media (max-width: 767px) {
   .main {
@@ -2561,12 +2540,12 @@ header.header {
 }
 @media (min-width: 1200px) {
   .main {
-    width: 1160px;
+    width: 1000px;
   }
 }
 @media (min-width: 1600px) {
   .main {
-    width: 73%;
+    width: 1200px;
   }
 }
 @media (max-width: 991px) {
@@ -2576,7 +2555,7 @@ header.header {
   }
 }
 .main-inner {
-  border-radius: initial;
+  border-radius: 16px;
   box-sizing: border-box;
   width: calc(100% - 252px);
 }
@@ -2717,8 +2696,8 @@ header.header {
 }
 .sidebar-inner {
   background: var(--content-bg-color);
-  border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: 16px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.376);
   box-sizing: border-box;
   color: var(--text-color);
   margin-top: 12px;
@@ -2768,6 +2747,13 @@ header.header {
 .links-of-author-item a:hover {
   background: var(--body-bg-color);
 }
+.back-to-top {
+  background: var(--body-bg-color);
+  margin: -4px -10px -18px;
+}
+.back-to-top.back-to-top-on {
+  margin-top: 16px;
+}
 .main-inner .sub-menu,
 .main-inner .post-block,
 .main-inner .tabs-comment,
@@ -2775,12 +2761,12 @@ header.header {
 .main-inner .comment-position .comments,
 .main-inner .pagination {
   background: var(--content-bg-color);
-  border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  border-radius: 16px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.376);
 }
 .main-inner .post-block:not(:first-child):not(:first-child) {
-  border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: 16px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.376);
   margin-top: 12px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2797,8 +2783,8 @@ header.header {
 .main-inner > .comments,
 .main-inner .comment-position .comments,
 .main-inner .pagination {
-  border-radius: initial;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  border-radius: 16px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.376);
   margin-top: 12px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2830,10 +2816,10 @@ header.header {
 }
 .post-body h1,
 .post-body h2 {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #363636;
 }
 .post-body h3 {
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px dotted #363636;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-inner {
@@ -2863,307 +2849,299 @@ header.header {
     padding: 10px 12px;
   }
 }
-/* // Custom styles. */
-/*gallery*/
-.gallery-page {
-  margin-top: -50px;
+.exif-container {
+  position: relative;
 }
-.img-list,
-.gallery-list {
-  display: flex;
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-.img-column {
-  display: flex;
-  flex-direction: column-reverse;
-}
-.img-column a,
-.gallery-column a {
-  border-bottom: 0px;
-}
-.gallery-item {
-  margin-bottom: -50px;
-}
-.gallery-item p {
-  margin: -25px auto -10px;
-  max-width: 50%;
-  text-align: center;
-  font-size: 15px;
-  color: #222;
-  background: rgba(255,255,255,0.3);
-  border-radius: 7px;
-  border: 1px solid #222;
-  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
-}
-.posts-expand .post-body .gallery-column a img {
-  height: 250px;
-  width: 300px;
-  object-fit: cover;
-}
-@media (max-width: 767px) {
-  .gallery-item p {
-    min-width: 75px;
-    font-size: 13px;
-  }
-}
-/* // 网站最顶部条线的颜色 */
-.headband {
-  height: 0px;
-  background: #f2f4ef;
-}
-/* // 设置背景图片 */
-body {
-  background: url("/https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/test/ab4f835edadacf7f4caf5afbddac5fe37965bda4.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_200/quality,q_90");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
-/* // 设置侧边栏左上角网站标题和副标题区颜色 */
-.site-meta {
-  background: #222;
-}
-/* // 设置侧边栏网站标题样式 */
-.site-title {
-  color: #fff;
-}
-/* // 设置侧边栏网站标题鼠标悬浮样式 */
-.site-title:hover {
-  letter-spacing: 0.4rem;
-}
-/* // 侧边栏网站副标题样式 */
-.site-subtitle {
-  color: #fff;
-}
-.site-author-image {
-  border: 0px;
-}
-/* // 文章标题鼠标悬浮下划线样式 */
-.posts-expand .post-title-link::before {
-  content: "";
+.exif-container .exif-metabar {
+  background: rgba(0,0,0,0.5);
+  bottom: 0;
+  padding: 0.5em 0;
   position: absolute;
   width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #dfa710;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
-/* // 文章标题颜色 */
-.posts-expand .post-title-link {
-  color: #dfa710;
-}
-/* // 阅读全文按钮样式 */
-.btn {
-  border: 2px solid #dfa710;
-  color: #dfa710;
-}
-/* // 阅读全文按钮鼠标悬浮样式 */
-.btn:hover {
-  border-color: #dfa710;
+.exif-container .exif-metabar span {
   color: #fff;
-  background: #dfa710;
+  font-style: italic;
+  margin: 0 1em;
 }
-/* // 设置文章和侧边栏中链接样式 */
-a:hover,
-span.exturl:hover {
-  color: #dfa710;
-  border-bottom-color: #dfa710;
+a {
+  border: 0;
 }
-/* // 修改文章页侧边栏文章目录下面的第一个标题的鼠标悬浮样式 */
-/* // 真的有毒，文章目录第一个标题的样式还是单独设置的...一开始还没发现 */
-.post-toc .nav .active-current > a:hover {
-  color: #dfa710;
+p {
+  margin: 0 0 0px;
 }
-/* // 文章页面左边文章标题颜色 */
-.post-toc ol a:hover {
-  color: #dfa710;
-  border-bottom-color: #dfa710;
-}
-/* // 文章页面左边文章标题active时颜色 */
-.post-toc .nav .active > a {
-  color: #dfa710;
-  border-bottom-color: #dfa710;
-}
-/* // 文章页侧边栏文章目录和站点概况鼠标悬浮样式 */
-.sidebar-nav li:hover {
-  color: #dfa710;
-}
-/* // 文章页侧边栏文章目录和站点概况active时鼠标悬浮样式 */
-.sidebar-nav .sidebar-nav-active:hover {
-  color: #dfa710;
-}
-/* // 文章页侧边栏文章目录和站点概况active时样式 */
-.sidebar-nav .sidebar-nav-active {
-  color: #dfa710;
-  border-bottom-color: #dfa710;
-}
-/* // 社交栏鼠标悬浮样式 */
-#sidebar div.links-of-author.motion-element a:hover {
-  color: #dfa710;
-  background: rgba(255,255,255,0);
-}
-/* // 友链鼠标悬浮样式 */
-.sidebar a:hover,
-.sidebar span.exturl:hover {
-  border-bottom-color: #dfa710;
-  color: #dfa710;
-}
-/* // RSS文字颜色 */
-/* //#sidebar div.feed-link.motion-element > a {
-//  color: #DfA710;
-//} */
-/* // RSS图标颜色
-//#sidebar div.feed-link.motion-element > a i{
-//  color: #DfA710;
-//} */
-/* // 侧边栏日志、分类、标签 上面的数字的颜色 */
-.site-state-item-count {
-  color: #dfa710;
-}
-/* // 设置底部文章分页数字鼠标悬浮上划线颜色 */
-.pagination .prev:hover,
-.pagination .next:hover,
-.pagination .page-number:hover {
-  border-top-color: #dfa710;
-}
-/* // 设置文章页上一篇文章和下一篇文章鼠标悬浮样式 */
-.post-nav-item a:hover {
-  color: #dfa710;
-  border-bottom: none;
-}
-/* // 修改鼠标选中字符的颜色 */
-/* webkit, opera, IE9 */
-::selection {
-  background: #dfa710;
-  color: #f7f7f7;
-}
-/* firefox */
-::-moz-selection {
-  background: #dfa710;
-  color: #f7f7f7;
-}
-/* // 侧边栏返回顶部按钮鼠标悬浮样式 */
-.back-to-top:hover {
-  background: #eee;
-  color: #dfa710;
-}
-/* // 当页面处于 首页、标签、分类、归档、关于页面其中之一时，处于哪个页面哪个选项就变蓝 */
-#menu > li.menu-item-active > a {
-  color: #dfa710;
-}
-/* // 侧边栏导航小圆点颜色 */
-.menu-item-active a:after,
-.menu .menu-item a:hover:after,
-.menu .menu-item span.exturl:hover:after {
-  background-color: #dfa710;
-}
-/* // 侧边栏上半部分设置为透明 */
-.menu-item-active a,
-.menu .menu-item a:hover,
-.menu .menu-item span.exturl:hover {
-  background: rgba(242,242,242,0.3);
-  border-bottom-color: rgba(255,255,255,0.2);
-}
-/* // 侧边栏下半部分设置为透明 */
-.sidebar {
-  background: rgba(255,255,255,0);
-}
-.sidebar-inner {
-  background: rgba(255,255,255,0.2);
-}
-/* // 设置底部文章分页部分为透明 */
-.pagination {
-  background: rgba(255,255,255,0);
-}
-.pagination .page-number.current {
-  color: #fff;
-  background: #dfa710;
-}
-/* // 导航栏底部百分比透明 */
-.back-to-top,
-.back-to-top:hover {
-  background: rgba(255,255,255,0.3);
-}
-/* // 设置文章背景透明度 */
-.post-block {
-  background: rgba(255,255,255,0.2);
-}
-/* // 这里需要完全透明，不然就会在上面的0.2基础上再进行透明度计算 */
-.btn {
-  background: rgba(255,255,255,0);
-}
-.header-inner {
-  background: rgba(255,255,255,0.2);
-}
-.main-inner {
-  background: rgba(255,255,255,0.2);
+.headband {
+  background: #363636;
+  height: 10px;
 }
 .site-brand-container {
-  background: #222;
+  background: #454545;
+  padding: 10px 10px;
+  border-radius: 16px 16px 0px 0px;
 }
-/* // 代码区背景 */
-.table-container {
-  background: rgba(240,240,222,0.2);
+.site-meta {
+  text-align: center;
+  padding: 0 0;
 }
-.table-container :hover {
-  background: rgba(237,237,225,0.03);
+.site-title {
+  font-size: 26px;
+  font-weight: bold;
 }
-/* // 代码背景 */
-table > tbody > tr:nth-of-type(odd) {
-  background-color: rgba(255,255,255,0);
+.site-subtitle {
+  margin: 0;
 }
-table > tbody > tr:hover {
-  background-color: rgba(233,230,230,0);
+.menu {
+  padding: 0 0 16px 0;
 }
-pre,
-.highlight {
-  background: rgba(200,31,33,0);
+.menu-item a {
+  font-size: 16px;
 }
-/* //代码行标背景 */
-.highlight .gutter pre {
-  background: rgbargba(227, 235, 227, 0.3);
+.menu-item a:menu-item-active {
+  background: var(--menu-item-bg-color);
 }
-.highlight .code pre {
-  background: rgba(29,31,100,0);
+.menu-item a:hover {
+  background: #666;
 }
-/* // 评论 */
-.comments {
-  background: rgba(255,255,255,0.2);
+.menu-item i[class^='fa'] {
+  margin-right: 6px;
 }
-/* // 文章页内作者信息 */
-.post-copyright {
-  border-left: 3px solid #dfa710;
-  background: rgba(255,255,255,0.3);
+.sidebar-inner {
+  padding: 10px 0;
 }
-/* 行内代码块的自定义样式 */
-code {
-  color: #fff;
-  background: rgba(239,183,48,0.4);
-  margin: 2px;
-  border: 0px solid #dfa710;
+.site-state-item {
+  padding: 0;
 }
-/* // 底部动态的叶子图标 */
-.with-love {
-  color: #f00;
+.site-state-item-count {
+  font-size: 20px;
+  font-weight: 600;
 }
-/* // 去掉文章白色背景 */
-.main-inner {
-  background: rgba(255,255,255,0);
+.sidebar-nav li {
+  border-bottom: 0px solid transparent;
 }
-/* // 标签页链接下划线颜色 */
-a,
-span.exturl {
-  border-bottom: 1px solid #dfa710;
+.sidebar-nav li.sidebar-nav-overview {
+  margin-left: 20px;
 }
-/* // 标签页链接鼠标悬浮颜色 */
-.tag-cloud a:hover {
-  color: #dfa710 !important;
+.sidebar-nav li:hover {
+  color: #00f7ff;
+}
+.sidebar-toc-active .sidebar-nav-toc,
+.sidebar-overview-active .sidebar-nav-overview {
+  color: #11d2d9;
+  transition-delay: 200ms;
+}
+.sidebar-toc-active .sidebar-nav-toc:hover,
+.sidebar-overview-active .sidebar-nav-overview:hover {
+  color: #00f7ff;
+}
+.sidebar-nav-active .sidebar-panel-container {
+  padding: 14px 10px 0px 10px;
+}
+.post-toc {
+  font-size: 16px;
+}
+.post-toc ol {
+  padding: 0 0 0 10px;
+}
+.post-toc ol > :last-child {
+  margin-bottom: 0px;
+}
+.post-toc .nav .active > a {
+  border-bottom-color: #11d2d9;
+  color: #1bb0b5;
+}
+.post-toc .nav .active > a:hover {
+  color: #00f7ff;
+}
+.post-toc .nav .active-current > a {
+  color: #11d2d9;
+}
+.post-toc .nav .active-current > a:hover {
+  color: #00f7ff;
+}
+.posts-expand .post-header {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+:not(.post-meta-break) + .post-meta-item::before {
+  content: '|';
+  margin: 0 0.5em;
+}
+.posts-expand .post-meta-container {
+  color: #c4c4c4;
+  font-size: 12px;
+  margin-top: 0px;
+}
+.posts-expand .post-meta-container time {
+  border-bottom: 0px dashed #999;
+}
+.post-body h1 .header-anchor,
+.post-body h2 .header-anchor,
+.post-body h3 .header-anchor,
+.post-body h4 .header-anchor,
+.post-body h5 .header-anchor,
+.post-body h6 .header-anchor,
+.post-body h1 .headerlink,
+.post-body h2 .headerlink,
+.post-body h3 .headerlink,
+.post-body h4 .headerlink,
+.post-body h5 .headerlink,
+.post-body h6 .headerlink {
+  color: inherit;
+  font-size: 0.875em;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+.post-body h1:hover .header-anchor:hover,
+.post-body h2:hover .header-anchor:hover,
+.post-body h3:hover .header-anchor:hover,
+.post-body h4:hover .header-anchor:hover,
+.post-body h5:hover .header-anchor:hover,
+.post-body h6:hover .header-anchor:hover,
+.post-body h1:hover .headerlink:hover,
+.post-body h2:hover .headerlink:hover,
+.post-body h3:hover .headerlink:hover,
+.post-body h4:hover .headerlink:hover,
+.post-body h5:hover .headerlink:hover,
+.post-body h6:hover .headerlink:hover {
+  opacity: 1;
+  color: #00f7ff;
+}
+.group-picture {
+  margin: 0 0 0px;
+}
+.group-picture .group-picture-row {
+  margin: 0 0 0px;
+}
+.post-block {
+  padding: 20px 20px 20px 20px;
+}
+.post-button {
+  margin-top: 10px;
+}
+.main {
+  column-gap: 2%;
+}
+.back-to-top {
+  font-size: 18px;
+}
+.back-to-top:hover {
+  color: #00f7ff;
+}
+.footer {
+  font-size: 12px;
+  padding: 10px 0;
+}
+.post_cover {
+  width: 200px;
+}
+.post_gallery body {
+  display: false;
+  justify-content: center;
+}
+.post_gallery .shell {
+  max-width: 1200px;
+  column-count: 4;
+  column-gap: 16px;
+}
+.post_gallery .image {
+  margin-bottom: 10px;
+}
+.post_gallery .image img {
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .post_gallery .shell {
+    column-count: 3;
+  }
+}
+@media (max-width: 850px) {
+  .post_gallery .shell {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .post_gallery .shell {
+    column-count: 1;
+  }
+}
+.shell {
+  column-count: 5;
+  column-gap: 16px;
+}
+.shell .image {
+  margin-bottom: 10px;
+}
+.shell img {
+  width: 100%;
+  margin: 0;
+}
+.shell .cover {
+  border: 0px solid #fff;
+  position: relative;
+  background: #ccc;
+  margin: 0 0 10px;
+}
+.shell .cover .exif-container .exif-metabar {
+  display: none;
+  background-color: rgba(0,0,0,0);
+  padding: 0;
+}
+.shell .cover .exif-container .exif-metabar span {
+  font-size: 10px;
+  margin: 0;
+}
+.shell .cover img {
+  margin: 0;
+}
+.shell .cover figcaption {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0,0,0,0.247);
+  text-align: left;
+}
+.shell .cover figcaption h4 {
+  font-size: 16px;
+  margin: 2px 10px;
+  color: rgba(255,255,255,0.6);
+}
+.shell .cover figcaption p {
+  font-size: 12px;
+  margin: 2px 10px;
+  color: rgba(255,255,255,0.4);
+}
+@media (max-width: 1200px) {
+  .shell {
+    column-count: 4;
+  }
+}
+@media (max-width: 1000px) {
+  .shell {
+    column-count: 3;
+  }
+}
+@media (max-width: 800px) {
+  .shell {
+    column-count: 2;
+  }
+}
+@media (max-width: 600px) {
+  .shell {
+    column-count: 1;
+  }
+}
+.main-inner .post-block:not(:first-child):not(:first-child) {
+  margin-top: 10px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner .post-block:not(:first-child):not(:first-child) {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .main-inner .post-block:not(:first-child):not(:first-child) {
+    margin-top: 0px;
+  }
 }
