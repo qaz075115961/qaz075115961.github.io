@@ -3093,6 +3093,7 @@ p {
 }
 .shell .cover img {
   margin: 0;
+  max_width: 200px;
 }
 .shell .cover figcaption {
   position: absolute;
@@ -3125,11 +3126,6 @@ p {
 @media (max-width: 800px) {
   .shell {
     column-count: 2;
-  }
-}
-@media (max-width: 600px) {
-  .shell {
-    column-count: 1;
   }
 }
 .main-inner .post-block:not(:first-child):not(:first-child) {
