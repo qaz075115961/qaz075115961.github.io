@@ -3086,18 +3086,18 @@ p {
   bottom: 2px;
   width: 100%;
   margin: 0;
-  background-color: rgba(0,0,0,0.247);
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
   text-align: left;
 }
 .album figure figcaption h4 {
   font-size: 16px;
   margin: 2px 10px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.898);
 }
 .album figure figcaption p {
   font-size: 12px;
   margin: 2px 10px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.8);
 }
 .exifless .exif-container .exif-metabar {
   display: none;
