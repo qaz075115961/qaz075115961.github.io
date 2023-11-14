@@ -197,7 +197,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-11-15 00:50:46" itemprop="dateModified" datetime="2023-11-15T00:50:46+08:00">2023-11-15</time>
+      <time title="修改时间：2023-11-15 01:04:03" itemprop="dateModified" datetime="2023-11-15T01:04:03+08:00">2023-11-15</time>
     </span>
 
   
@@ -245,8 +245,8 @@
             "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/naixi/IMG20210313222709.jpg",
             "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/naixi/IMG20210320161113.jpg",
         ];
-        var cover_quality = "?x-oss-process=image/resize,m_lfit,w_200/quality,q_90";
-        var cover_path = "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/naixi/IMG20201201173650.jpg";//封面路径
+        var image_quality = "?x-oss-process=image/resize,m_lfit,w_200/quality,q_90";
+        var image_path = "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/naixi/IMG20201201173650.jpg";//封面路径
         var post_path = "2023/11/14/13-39-05/";//帖子路径
         //------------------------------------------------
         var _path = window.location.pathname;
@@ -257,7 +257,7 @@
                 </a> \
             ";
             html_str = html_str.replace("post_path", post_path);
-            html_str = html_str.replace("image_path", cover_path);
+            html_str = html_str.replace("image_path", image_path + image_quality);
             div.innerHTML = html_str;
         } else {
             let images = "";
@@ -267,7 +267,8 @@
                         <img src=\"image_path\"> \
                     </figure> \
                 ";
-                let image_path = image_list[i];
+                let quality = "?x-oss-process=image/quality,q_60";
+                let image_path = image_list[i] + quality;
                 html_str = html_str.replace("image_path", image_path);
                 images += html_str;
             }
