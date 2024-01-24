@@ -4,6 +4,40 @@
   
     
     <entry>
+      <title>甘南</title>
+      <link href="/2024/01/24/20-28-33/"/>
+      <url>/2024/01/24/20-28-33/</url>
+      
+        <content type="html"><![CDATA[<div id="gannan">    <script>        //------------------------------------------------        var div = document.querySelector('#gannan');//要与div的id一致        //------------------------------------------------        //https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P(\d*e?).(jpg|JPG)        //"https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P$1.$2",        var image_list = [//图片列表            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1015373.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1015377e.jpg",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1015406e.jpg",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1015436.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1016025.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1016035.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026423.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026434.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026447.jpg",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026457.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026539.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026540.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026685.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026706.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026708.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026758.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026807.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026854.JPG",            "https://bbm-img-store-1.oss-cn-guangzhou.aliyuncs.com/gannan/P1026921.JPG",        ];        var image_quality = "?x-oss-process=image/resize,m_lfit,w_200/quality,q_90";        var image_path = image_list[0];//封面路径        var post_path = "2024/01/24/20-28-33/";//帖子路径        //------------------------------------------------        var _path = window.location.pathname;        if (_path == "/") {            let html_str = " \                <a class=\"exifless\" href=\"../post_path\"> \                    <img src=\"image_path\"> \                </a> \            ";            html_str = html_str.replace("post_path", post_path);            html_str = html_str.replace("image_path", image_path + image_quality);            div.innerHTML = html_str;        } else {            let images = "";            for (let i = 0; i < image_list.length; i++) {                let html_str = " \                    <figure> \                        <img src=\"image_path\"> \                    </figure> \                ";                let quality = "?x-oss-process=image/quality,q_60";                let image_path = image_list[i] + quality;                html_str = html_str.replace("image_path", image_path);                images += html_str;            }            let album = "<div class=\"album\">images</div>";            album = album.replace("images", images);            div.innerHTML = album;        }    </script></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 相册 </tag>
+            
+            <tag> 甘南 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/01/24/15-53-51/"/>
+      <url>/2024/01/24/15-53-51/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><span id="more"></span><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>奶昔相册2</title>
       <link href="/2023/11/14/13-39-05/"/>
       <url>/2023/11/14/13-39-05/</url>
@@ -40,19 +74,6 @@
             <tag> 奶昔 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2023/11/08/14-08-52/"/>
-      <url>/2023/11/08/14-08-52/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><span id="more"></span><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
